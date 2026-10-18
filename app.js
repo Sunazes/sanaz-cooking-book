@@ -183,7 +183,6 @@ function renderRecipe(id) {
       ${v.notes.length ? `<section class="notes"><h2 class="sec">نکته‌ها</h2><ul>${v.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul></section>` : ""}
       <div class="foot">
         ${v.sources.map(s => `<a href="${esc(s.u)}" target="_blank" rel="noopener">منبع: ${esc(s.t)}</a>`).join("")}
-        <a href="${esc(r.notion)}" target="_blank" rel="noopener">باز کردن در نوشن ↗</a>
       </div>
     </article>`;
   $("back").onclick = () => { location.hash = ""; };
