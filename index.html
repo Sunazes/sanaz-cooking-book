@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cooking Book Sanaz</title>
+<meta name="description" content="کتاب آشپزی سانازی؛ ۱۱۱ غذا، هر کدام با نسخه‌ی معمولی و سالم.">
+<meta name="theme-color" content="#2F6B4F">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍲</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lalezar&family=Vazirmatn:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css?v=76580524">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a href="#" class="brand" dir="ltr">Cooking Book Sanaz</a>
+    <div class="top-actions">
+      <button class="iconbtn" id="randomBtn" title="یه غذای تصادفی پیشنهاد بده" aria-label="غذای تصادفی">🎲</button>
+      <button class="iconbtn" id="themeBtn" title="تغییر تم" aria-label="تغییر تم">🌓</button>
+    </div>
+  </header>
+  <main id="view"></main>
+</div>
+
+<!-- cooking mode -->
+<div class="cook" id="cook" hidden role="dialog" aria-modal="true" aria-label="حالت پخت">
+  <div class="cook-in">
+    <div class="cook-top"><span id="cookTitle"></span><button class="close" id="cookClose">بستن</button></div>
+    <div class="progress"><span id="prog"></span></div>
+    <div id="cookStep" class="muted"></div>
+    <p class="cook-body" id="cookBody"></p>
+    <ul class="cook-sub" id="cookSub"></ul>
+    <div id="cookTimers" class="cook-timers"></div>
+    <details class="cook-ings">
+      <summary>مواد لازم</summary>
+      <ul id="cookIngs"></ul>
+    </details>
+    <div class="nav">
+      <button id="prev">مرحله‌ی قبل</button>
+      <button class="next" id="next">مرحله‌ی بعد</button>
+    </div>
+  </div>
+</div>
+
+<!-- running timers -->
+<div class="dock" id="dock" aria-live="polite"></div>
+
+<script src="data/recipes.js?v=0c677b3e"></script>
+<script src="app.js?v=ecec5052"></script>
+</body>
+</html>
